@@ -32,7 +32,9 @@ export default {
                 senha: this.senha
             }).then(response => {
                 if (response.data.authenticated === true) {
-                    console.log('autenticado');
+                    this.$store.state.authentication.authenticated = true;
+
+                    this.$router.push({ name: 'Home'});
                 }
             });
         }

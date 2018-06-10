@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import AnonymousPage from '@/components/AnonymousPage'
+import Home from '@/components/Home'
 import Oficina from '@/components/Oficina'
 
 Vue.use(Router)
@@ -9,8 +9,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'AnonymousPage',
-      component: AnonymousPage
+      name: 'Home',
+      component: Home
     },
     {
       path: '/Login',

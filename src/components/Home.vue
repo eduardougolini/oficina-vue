@@ -7,16 +7,21 @@
 
 <script>
 
+import { mapActions, mapGetters } from 'vuex';
+
 export default {
     name: 'home',
     computed: {
-      getAuthenticated () {
-        return this.$store.state.authentication.authenticated;
-      }
+        ...mapGetters('Authentication', [
+            'getAuthenticated'
+        ]),
     },
     methods: {
+      ...mapActions('Authentication', [
+          'logoutAction'
+      ]),
       logout () {
-        this.$store.state.authentication.authenticated = false;
+        this.logoutAction();
       }
     }
 }

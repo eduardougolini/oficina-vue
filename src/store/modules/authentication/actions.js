@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export default {
   loginAction: ({commit}, {email, senha}) => {
-    axios.post('http://localhost:3000/login',{
+    axios.post('http://oficina.oincriveleduardo.com.br/login',{
         email: email,
         senha: senha
     }).then(({data}) => {
